@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: green;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/material-design-icons/iconfont/material-icons.css";
+
+button {
+  font-size: 12px !important;
+}
+body {
+  font-size: 13px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header {
+  padding-top: 10px;
+}
+
+.box {
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.box .info {
+  width: 80%;
+  padding-left: 15px;
+}
+.box .action {
+  width: 20%;
+  text-align: right;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+.list-container {
+  width: calc(100% - 20px);
+  height: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+article {
+  display: inline-block;
+}
+
+img {
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.item-details {
+  margin: 0 10px 0 15px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 60%;
+  white-space: normal;
+}
+
+.categories .list-container {
+  margin-left: 15px;
+}
+
+.panel {
+  margin: 10px 5px;
+  padding: 5px 15px;
+  height: fit-content;
+  color: #f96332;
+  box-shadow: 2px 2px 10px #546e7a;
+  display: inline-block;
+  height: auto;
+  cursor: pointer;
+}
+.panel-body {
+  font-weight: bold;
+}
+.cards {
+  cursor: pointer;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  margin: 20px 10px;
+}

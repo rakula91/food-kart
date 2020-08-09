@@ -1,0 +1,23 @@
+<section class="box favourites">
+    <article>
+        <div class="row">
+            <div class="col-md-12">
+                <img [src]="item.image" width="100%" />
+            </div>
+            <div class="item-details">
+                {{ item.name }}<br>&#8377;{{ item.price }}
+            </div>
+            <div>
+                <button class="btn btn-primary"><span (click)="removeFromCart()">-</span>{{item.count}}<span
+                        (click)="addToCart()">+</span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">Category: {{ item.category }}</div>
+            <div class="col-md-6">{{item.rating }} Rating, ({{item.reviews}} Reviews)</div>
+        </div>
+        <h4>DETAILS</h4>
+        <p>{{item.details}}</p>
+    </article>
+</section>

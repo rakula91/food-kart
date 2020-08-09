@@ -1,0 +1,57 @@
+<section class="box favourites">
+    <header class="row col-lg-12">
+      <div class="info">
+        <h5>FAVOURITES</h5>
+        <p>Enjoy what you have been ordering!</p>
+      </div>
+      <div class="action"><i class="material-icons">add_shopping_cart</i>&nbsp;{{totalCartItems.length}}</div>
+    </header>
+    <div class="list-container">
+      <article *ngFor="let item of favourites" class="col-lg-3 col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <img [src]="item.image" width="100%" (click)="viewDetails(item);" />
+          </div>
+          <div class="item-details">
+            {{ item.name }}<br>&#8377;{{ item.price }}
+          </div>
+          <div>
+            <button class="btn btn-primary" (click)="addToCart(item);">REORDER</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="box categories">
+    <header class="row col-lg-12" id="cat-header">
+      <input type="text" placeholder="Search for a particular dish or ingredient" />
+      <div class="info">
+        <h5>SELECT CATEGORIES</h5>
+      </div>
+      <div class="action">Filter&nbsp;<i class="material-icons">filter</i></div>
+      <div class="list-container">
+        <div class="panel panel-default" *ngFor="let item of categories">
+          <div class="panel-body" (click)="filter(item.name);">
+            <img [src]="item.image" width="30px" />
+            {{ item.name }}
+          </div>
+        </div>
+      </div>
+    </header>
+    <div>
+      <article *ngFor="let item of filteredItems" class="col-lg-3 col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <img [src]="item.image" width="100%" />
+          </div>
+          <div class="item-details">
+            {{ item.name }}<br>&#8377;{{ item.price }}
+          </div>
+          <div>
+            <button class="btn btn-primary" (click)="addToCart(item);">ADD TO BAG</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  
